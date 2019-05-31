@@ -1,0 +1,59 @@
+<html lang="pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Cripthigrafia</title>
+    </head>
+    <body>
+        <h1>Cripthigrafia</h1>
+        <div>
+            <!-- gerar chave -->
+            <h2>Gerar chave</h2>
+            <p>Inserir 3 números primos</p>
+            <div class="odds">
+                <input type="text" id="odd-number1">
+                <input type="text" id="odd-number2">
+                <input type="text" id="odd-number3">
+            </div>
+            <p id="chave-gerada"></p>
+
+            <div class="buttons">
+                <button id="generate-key">Gerar chave</button>
+                <button id="clear-generated-key">Limpar</button>
+            </div>
+        </div>
+
+        <div>
+            <!-- inserir chave -->
+            <h2>Inserir chave</h2>
+            <input type="text" id="user-key">
+            <div class="buttons">
+                <button id="insert-key">Inserir chave</button>
+                <button id="remove-key">Limpar</button>
+            </div>
+            <!-- colocar aqui algo pra verificar se a chave foi inserida -->
+        </div>
+
+        <div>
+            <!-- criptografar texto -->
+            <h2>Criptografar texto</h2>
+            <input type="text" id="text-to-encript">
+            <p id="encripted"></p>
+            <div class="buttons">
+                <button id="generate-key">Criptografar texto</button>
+                <button id="clear-encripted">Limpar</button>
+            </div>
+        </div>
+
+        <div>
+            <!-- decriptografar texto -->
+            <h2>Decriptografar texto</h2>
+            <input type="text" id="text-to-decript">
+            <p id="decripted"></p>
+            <div class="buttons">
+                <button>Decriptografar texto</button>
+                <button id="clear-decripted">Limpar</button>
+            </div>
+
+        </div>
+    </body>
+</html>

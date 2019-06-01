@@ -1,0 +1,68 @@
+body {
+    /* width: 50%;
+    align-content: center; */
+    background-color: #2e2e2e;
+}
+
+#content{
+    width: 50%;
+    margin: auto;
+    padding: 10x;
+    text-align: center;
+    display: grid;
+}
+
+#box{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    background-color: #565656;
+    border: #565656;
+    border-radius: 4px;
+    box-shadow: 3px 3px #2d2d2d;
+}
+
+#inf{
+    margin-top: 1%;
+}
+
+
+#box.b1{
+    float: left;
+    margin-left: 1%;
+}
+
+#box.b2{
+    float: right;
+    margin-right: 1%;
+}
+
+#box.b3{
+    float: left;
+    margin-left: 1%;
+}
+
+#box.b4{
+    float: right;
+    margin-right: 1%;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+}
+
+h2{
+    font-family: Helvetica, sans-serif;
+}
+
+p{
+    font-family: Helvetica, sans-serif;
+}
+
+input{
+    width: 100%;
+}
+
+.odds input{
+    width: 100%;
+}

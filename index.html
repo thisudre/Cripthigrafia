@@ -13,15 +13,18 @@
                     <!-- gerar chave -->
                     <h2>Gerar chave</h2>
                     <p>Inserir 3 números primos</p>
-                    <table class="odds">
-                        <tr>
-                            <td><input type="text" id="odd-number1"></td>
-                            <td><input type="text" id="odd-number2"></td>
-                            <td><input type="text" id="odd-number3"></td>
-                        </tr>
-                    </table>
-                    
+                    <form id="form-generate">
+                        <table class="prime">
+                            <tr>
+                                <td><input type="text" id="prime-number1"></td>
+                                <td><input type="text" id="prime-number2"></td>
+                                <td><input type="text" id="prime-number3"></td>
+                            </tr>
+                        </table>
+                    </form>
                     <p id="chave-gerada"></p>
+                    <ul id="erros-geracao" class="erros"></p>
+                    
                     <div class="buttons">
                         <button id="generate-key">Gerar chave</button>
                         <button id="clear-generated-key">Limpar</button>
@@ -65,5 +68,6 @@
     
             </div>
         </div>
+        <script src="js/gerar-chave.js"></script>
     </body>
 </html>

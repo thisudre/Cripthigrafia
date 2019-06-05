@@ -48,15 +48,15 @@ body {
 }
 
 h1{
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 h2{
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 p{
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 input{
@@ -65,4 +65,12 @@ input{
 
 .prime input{
     width: 100%;
+}
+
+ul.erros li{
+    font-family: Roboto, sans-serif;
+    color: darkred;
+    list-style: none;
+    font-size: 12px;
+    text-align: left;
 }

@@ -33,6 +33,19 @@ btnGerarChave.addEventListener("click", function(){
     form.reset()
 })
 
+var btnLimpar = document.querySelector("#clear-generated-key")
+
+btnLimpar.addEventListener("click", function(){
+    event.preventDefault()
+    var chaveGerada = document.querySelector("#chave-gerada")
+    var mensagensErro = document.querySelector("#erros-geracao")
+    var form = document.querySelector("#form-generate")
+
+    limpar(chaveGerada)
+    limpar(mensagensErro)
+    form.reset()
+})
+
 function obterChavePeloForm(form)
 {
     var primeNum1 = form.querySelector("#prime-number1").value
@@ -189,5 +202,5 @@ function exibirErros(erros)
 
 function limpar(campo)
 {
-    campo.textContent = ''
+    campo.innerHTML = ''
 }

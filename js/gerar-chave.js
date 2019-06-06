@@ -8,14 +8,14 @@ btnGerarChave.addEventListener("click", function(){
     var primeNumbers = obterChavePeloForm(form)
     
     var erros = validarCampos(primeNumbers)
-    var mensagensErro = document.querySelector("#erros-geracao")
+    var ulErros = document.querySelector("#erros-geracao")
 
     if (erros.length > 0)
     {
-        exibirErros(erros)
+        exibirErros(erros, ulErros)
         return
     }
-    mensagensErro.innerHTML = ''
+    ulErros.innerHTML = ''
 
     var keyRSA = criarChave(primeNumbers)
 
@@ -26,10 +26,11 @@ btnGerarChave.addEventListener("click", function(){
         exibirErros(erros)
         return
     }
-    mensagensErro.innerHTML = ''
+    ulErros.innerHTML = ''
     
-    mostrarChave(keyRSA)
+    salvarKey(keyRSA)
 
+    mostrarChave(keyRSA)
     form.reset()
 })
 
@@ -188,9 +189,8 @@ function verificarPrimo(num)
     return true
 }
 
-function exibirErros(erros)
+function exibirErros(erros, ulErros)
 {
-    var ulErros = document.querySelector("#erros-geracao")
     ulErros.innerHTML = ''
     erros.forEach(function(erro) {
         console.log(erro)

@@ -1,19 +1,18 @@
-var db
-
-window.onload = function()
+function salvarKey(keyRSA)
 {
-    // abrir ou criar DB
-    var request = window.indexedDB.open('keys', 1)
+    stringParaSalvar = (keyRSA.E + ' ' + keyRSA.N + ' ' + keyRSA.phyN + ' ' + keyRSA.E + ' ' + keyRSA.D)
+    localStorage.setItem(keyRSA.D, stringParaSalvar)
+}
 
-    request.onerror = function() {
-        console.log('Database failed to open');
-      };
-      
-      // onsuccess handler signifies that the database opened successfully
-    request.onsuccess = function() {
-        console.log('Database opened successfully');
-
-        // Store the opened database object in the db variable. This is used a lot below
-        db = request.result;
+function recuperarKey(key)
+{
+    stringRecuperada = localStorage.getItem(key)
+    if(stringRecuperada != null)
+    {
+        arrayKey = stringRecuperada.split()
+        keyRSA = montarChave(arrayKey[0], arrayKey[1], arrayKey[2], arrayKey[3], arrayKey[4])
+        return keyRSA
     }
+
+    return null
 }

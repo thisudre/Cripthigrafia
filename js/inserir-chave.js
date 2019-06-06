@@ -29,6 +29,7 @@ btnInsertKey.addEventListener('click', function()
     ulErros.innerHTML = ''
     // Mostrar que o processo foi bem sucedido
     document.querySelector('#sucesso-chave').textContent = 'Chave inserida com sucesso'
+    principalKeyRSA = keyRSA
 })
 
 var btnLimpar = document.querySelector('#clear-key')

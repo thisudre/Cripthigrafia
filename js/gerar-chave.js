@@ -29,7 +29,6 @@ btnGerarChave.addEventListener("click", function(){
     ulErros.innerHTML = ''
     
     salvarKey(keyRSA)
-
     mostrarChave(keyRSA)
     form.reset()
 })

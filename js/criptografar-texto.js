@@ -9,7 +9,9 @@ btnCript.addEventListener('click', function()
     // Transformar o texto em numero
     cod = transformarTexto(text)
     // Efetuar o cálculo e armazenar num array
-    // Mostar o array de numeros4
+    arrayCodC = calcular(cod, keyRSA)
+    // Mostar o array de numeros
+
 })
 
 function transformarTexto(text)
@@ -24,6 +26,17 @@ function transformarTexto(text)
 }
 
 function calcular(cod, keyRSA)
+{
+    var codC = []
+    cod.forEach(function(num)
+    {
+        codC.push((num**keyRSA.E) % keyRSA.N)
+    })
+
+    return codC.join(' ')
+}
+
+function exibirMensagem(text, campoMsg)
 {
     
 }

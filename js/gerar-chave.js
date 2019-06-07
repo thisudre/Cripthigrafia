@@ -87,7 +87,7 @@ function montarChave(E, N, phyN, D)
 function calcularD(E, phyN)
 {
     D = 1
-    while((D * E) % phyN != 0)
+    while((D * E) % phyN != 1)
     {
         D = D+1
     }
@@ -164,7 +164,7 @@ function validarChave(keyRSA)
         console.log(erros[erros.len - 1])
     }
     // O numero presente em E não pode dividir N
-    if(keyRSA.E % keyRSA.N == 1)
+    if(keyRSA.E % keyRSA.phyN == 1)
     {
         erros.push("O terceiro número precisa ser diferente")
         console.log(erros[erros.len - 1])

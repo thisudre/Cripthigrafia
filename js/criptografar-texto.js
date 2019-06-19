@@ -1,4 +1,4 @@
-var btnCript = document.querySelector('#generate-key')
+var btnCript = document.querySelector('#btn-cript')
 
 btnCript.addEventListener('click', function()
 {
@@ -11,6 +11,8 @@ btnCript.addEventListener('click', function()
     // Efetuar o cálculo e armazenar num array
     arrayCodC = calcular(cod, keyRSA)
     // Mostar o array de numeros
+    campoMsg = document.querySelector('#encripted')
+    exibirMensagem(arrayCodC, campoMsg)
 
 })
 
@@ -38,5 +40,6 @@ function calcular(cod, keyRSA)
 
 function exibirMensagem(text, campoMsg)
 {
-    
+    campoMsg.textContent = text
+    return
 }
